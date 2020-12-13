@@ -33,3 +33,10 @@ for boardingPass in data:
         highest = int(seatID)
 
 print("The highest seat ID is {}".format(highest))
+
+# Part 2
+# if we use sets we can check for the difference between them
+
+filledSeats = set(range(min(seatIDs),highest))
+mySeatID = filledSeats.difference(set(seatIDs))
+print("My seat ID is {}".format(mySeatID))
